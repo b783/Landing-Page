@@ -1,15 +1,14 @@
 body, html {
-    height: 100%;
     margin: 0;
     padding: 0;
 }
-
+html {
+    overflow:scroll;
+    overflow-x: hidden;
+}
 .background {
-    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
     background-image: url('images/pexels-oliver-sjöström-1078981.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -18,7 +17,7 @@ body, html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-  }
+}
 .main-links {
     display:flex;  
     list-style:none;
@@ -41,8 +40,7 @@ a:hover {
     display: flex;
     flex-direction: column;
 }
-
-a , #main-hero-text-second , #main-hero-text {
+.text {
     text-decoration: none;
     font-family: verdana;
     font-weight: bold;
@@ -90,29 +88,18 @@ a , #main-hero-text-second , #main-hero-text {
 
 .image {
     width: 400px;
-    border-image-slice: 13 13 13 13;
-    border-image-width: 13px 13px 13px 13px;
-    border-image-outset: 13px 13px 13px 13px;
-    border-image-repeat: repeat repeat;
-    border-image-source: url("https://mdn.github.io/css-examples/tools/border-image-generator/border-image-4.png");
-    border-style: solid;
     margin-left: 40px;
-}
-#main-picture {
-    display: flex;
 }
 .mid {
     display: flex;
-    justify-content: center;
+    align-items: center;
     background-color: #00000049;
+    flex-direction: column;
+    padding: 20px;
 }
 .mid-top {
-    display: flex;
-    background-color: #00000049;
     margin: 0;
     padding: 0;
-    flex-direction: column;
-    align-items: center;
 }
 .mid-text {
     margin: 20px;
@@ -120,7 +107,48 @@ a , #main-hero-text-second , #main-hero-text {
     color: rgb(82, 157, 255);
     text-shadow: rgb(0, 0, 0) 2px 2px 2px;
     font-weight: bold;
+    padding: 15px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 52px;  
+    margin-bottom: 80px;
 }
 .card {
+    max-width: 200px;
+}
+.image , .new-image {
+    border-image-slice: 13 13 13 13;
+    border-image-width: 13px 13px 13px 13px;
+    border-image-outset: 13px 13px 13px 13px;
+    border-image-repeat: repeat repeat;
+    border-image-source: url("https://mdn.github.io/css-examples/tools/border-image-generator/border-image-4.png");
+    border-style: solid;
+}
+.new-image {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+}
 
+.quote {
+    padding: 80px;
+    background-color: #00000049;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.quote-text {
+    font-weight: bold;
+    line-height: 1.4;
+    color: #45e45a;
+    font-style: italic;
+    font-size: 20px;
+    min-width: 600px;
+}
+.quote-credit {
+    color: #c0ec44;
+    padding-left: 400px;
 }
