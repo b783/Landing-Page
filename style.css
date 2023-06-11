@@ -177,3 +177,6 @@ footer {
     display: flex;
     justify-content: center;
 }
+.footer-text {
+    min-width: 600px;
+}
